@@ -4,7 +4,7 @@ module.exports = function (grunt) {
         bower: {
             install: {
                 options: {
-                    targetDir: 'node_modules/appsngen-dev-box/js/dependencies',
+                    targetDir: 'node_modules/appsngen-dev-box/views/js/dependencies',
                     layout: 'byComponent',
                     install: true,
                     verbose: false,

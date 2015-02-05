@@ -2,20 +2,16 @@
     'use strict';
     var fs = require('fs'), portscanner = require('portscanner');
     var localConfigPath = __dirname + '/config.json';
-    var viewerConfigPath = __dirname + '/node_modules/appsngen-viewer/serverConfig.json';
-    var viewerRestServiceConfigPath = __dirname + '/node_modules/appsngen-viewer/configuration/restservice.json';
-    var viewerWebAppConfigPath = __dirname + '/node_modules/appsngen-viewer/configuration/web.json';
+    var viewerConfigPath = __dirname + '/node_modules/appsngen-viewer/src/serverconfig.json';
     var devBoxWidgetsPath = __dirname + '/node_modules/appsngen-dev-box/widgetslist.json';
-    var devboxConfigPath = __dirname  + '/node_modules/appsngen-dev-box/serverConfig.json',
-        localConfig, viewerConfig, devboxConfig, viewerRestServiceConfig, viewerWebAppConfig, devBoxWidgets;
+    var devboxConfigPath = __dirname  + '/node_modules/appsngen-dev-box/serverconfig.json',
+        localConfig, viewerConfig, devboxConfig, devBoxWidgets;
 
     var readConfigs = function(){
         try{
             localConfig = JSON.parse(fs.readFileSync(localConfigPath));
             viewerConfig = JSON.parse(fs.readFileSync(viewerConfigPath));
             devboxConfig = JSON.parse(fs.readFileSync(devboxConfigPath));
-            viewerRestServiceConfig = JSON.parse(fs.readFileSync(viewerRestServiceConfigPath));
-            viewerWebAppConfig = JSON.parse(fs.readFileSync(viewerWebAppConfigPath));
             devBoxWidgets = JSON.parse(fs.readFileSync(devBoxWidgetsPath));
         }
         catch(ex){
@@ -37,18 +33,15 @@
         devboxConfig.viewerHost = localConfig.viewerHost;
         devboxConfig.devBoxPort = localConfig.devBoxPort;
         devboxConfig.devBoxHost = localConfig.devBoxHost;
+        viewerConfig.user = localConfig.user;
         viewerConfig.viewerPort = localConfig.viewerPort;
         viewerConfig.viewerHost = localConfig.viewerHost;
         devBoxWidgets = localConfig.widgetsList;
-        viewerRestServiceConfig.restServicesUrls = localConfig.restServicesUrls;
-        viewerWebAppConfig['appstore.api'] = localConfig['appstore.api'];
     };
 
     var saveConfig = function(){
         fs.writeFileSync(viewerConfigPath, JSON.stringify(viewerConfig));
         fs.writeFileSync(devboxConfigPath, JSON.stringify(devboxConfig));
-        fs.writeFileSync(viewerRestServiceConfigPath, JSON.stringify(viewerRestServiceConfig));
-        fs.writeFileSync(viewerWebAppConfigPath, JSON.stringify(viewerWebAppConfig));
         fs.writeFileSync(devBoxWidgetsPath, JSON.stringify(devBoxWidgets));
     };
 
@@ -71,7 +64,7 @@
         }
         applyConfig();
         saveConfig();
-        require('./node_modules/appsngen-viewer/server');
+        require('./node_modules/appsngen-viewer/src/server');
         require('./node_modules/appsngen-dev-box/server');
     });
 }());

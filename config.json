@@ -3,26 +3,12 @@
     "viewerHost" : "localhost",
     "devBoxPort" : "8879",
     "devBoxHost" : "localhost",
-    "restServicesUrls": {
-        "tokenService": {
-            "host" : "dev.appsngen.com",
-            "path" :"/auth-service/tokens"
-        },
-        "preferencesService": {
-            "host": "dev.appsngen.com",
-            "path": "/api/preferences/global?organizationId=",
-            "isEnabled" : false
-        }
-    },
-    "appstore.api": {
-        "datasourceProxyUrl": "https://dev.appsngen.com/datasource-proxy",
-        "activProxyWebSocketUrl": "wss://dev.appsngen.com/activ-data-proxy",
-        "ieDataProxy": "https://dev.appsngen.com/datasource-proxy/ie-data-proxy"
-    },
     "widgetsList" : [
         "c:/Work/Portal/git/appsngen/applications/index-chart/.out/indexchart.zip",
-        "c:/Work/Portal/git/appsngen/applications/price-chart/.out/price-chart.zip",
-        "c:/Work/Portal/git/appsngen/applications/portfolio-holdings/.out/portfolio-holdings.zip",
-        "c:/Work/Portal/git/appsngen/applications/metal-prices/.out/metal-prices.zip"
-    ]
+        "c:/Work/Portal/git/appsngen/applications/price-chart/.out/price-chart.zip"
+    ],
+    "user": {
+        "name": "dev1@epamsystems.com",
+        "password": "dev1"
+    }
 }
