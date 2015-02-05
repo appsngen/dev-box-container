@@ -1,15 +1,12 @@
-{ 
-  "name": "appsngen-dev-box-container",
+{
+    "name": "appsngen-dev-box-container",
     "description": "Tool for appsngen widgets development.",
     "version": "1.0.0",
     "private": false,
     "dependencies": {
         "appsngen-dev-box": "",
         "appsngen-viewer": "",
-        "grunt": "~0.4.5",
-        "grunt-cli": "0.1.13",
-        "grunt-bower-task": "0.4.0",
-        "portscanner" : "1.0.0"
+        "portscanner": "1.0.0"
     },
     "repository": {
         "type": "git",

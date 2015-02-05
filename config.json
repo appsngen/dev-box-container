@@ -4,11 +4,11 @@
     "devBoxPort" : "8879",
     "devBoxHost" : "localhost",
     "widgetsList" : [
-        "c:/Work/Portal/git/appsngen/applications/index-chart/.out/indexchart.zip",
-        "c:/Work/Portal/git/appsngen/applications/price-chart/.out/price-chart.zip"
+        "d:/path/to/widget1.zip",
+        "d:/path/to/widget2.zip"
     ],
     "user": {
-        "name": "dev1@epamsystems.com",
-        "password": "dev1"
+        "name": "",
+        "password": ""
     }
 }
