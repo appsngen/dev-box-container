@@ -54,6 +54,7 @@
         devboxConfig.viewerHost = localConfig.viewerHost;
         devboxConfig.devBoxPort = localConfig.devBoxPort;
         devboxConfig.devBoxHost = localConfig.devBoxHost;
+        devboxConfig.user = localConfig.user;
         viewerConfig.viewerInstanceConfiguration.portHttp = localConfig.viewerPort;
         viewerConfig.viewerInstanceConfiguration.host = localConfig.viewerHost;
         viewerConfig.viewerInstanceConfiguration.baseUrl = 'http://' + localConfig.viewerHost + ':' + localConfig.viewerPort;

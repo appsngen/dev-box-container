@@ -1,7 +1,7 @@
 {
     "name": "appsngen-dev-box-container",
     "description": "Tool for appsngen widgets development.",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "private": false,
     "dependencies": {
         "appsngen-dev-box": "",
