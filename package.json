@@ -1,11 +1,11 @@
 {
     "name": "appsngen-dev-box-container",
     "description": "Tool for appsngen widgets development.",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "private": false,
     "dependencies": {
-        "appsngen-dev-box": "",
-        "appsngen-viewer": "",
+        "appsngen-dev-box": "2.0.4",
+        "appsngen-viewer": "2.0.3",
         "portscanner": "1.0.0"
     },
     "repository": {
